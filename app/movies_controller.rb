@@ -23,8 +23,9 @@ def can_be_created_with_a_hash_of_attributes
   movie = Movie.create(attributes)
 end
 
-def can_be_created_in_a_block(args = {title: "The Room", release_date: 2003})
+def can_be_created_in_a_block(args = {})
   Movie.create do |m|
+    binding.pry
     m.title = "The Room"
     m.release_date = 2003
   end
